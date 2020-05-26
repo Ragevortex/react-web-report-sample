@@ -4,6 +4,7 @@ import Hello from './Hello';
 import './style.scss';
 import Flexbox from 'flexbox-react';
 import $ from 'jquery';
+
 interface AppProps { }
 interface AppState {
   name: string;
@@ -21,10 +22,11 @@ class App extends Component<AppProps, AppState> {
     return (
       
     <div class="container">
+    
       <nav id="hamnav">
       <label for="hamburger">&#9776;</label>
       <input type="checkbox" id="hamburger"/>      
-      <div id="hamitems">
+      <div id="hamitems"> 
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="tech.html">Tech</a>
@@ -33,6 +35,7 @@ class App extends Component<AppProps, AppState> {
       </div>
     </nav>
     <div id="content">
+    <Hello name={this.state.name} />
     <ul class="flex-container">
   <li class="flex-item">1</li>
   <li class="flex-item">2</li>
