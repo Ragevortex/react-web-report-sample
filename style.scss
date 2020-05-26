@@ -1,0 +1,42 @@
+@import 'theme';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($custom-typography);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right;
+}
+footer{
+  min-width:100%;
+  background-color:#cdcdcd;
+}
+header{
+  min-width:100%;
+  background-color:#98a7ff;
+}
+.item li{
+  flex-basis:  25% auto; /* default auto */
+ }
+ .item li{
+    background:#ffccdd;
+   list-style:none;
+   display:block;
+   padding:15px;
+   float:left;
+   width:25%;
+   margin:5%;
+ }
