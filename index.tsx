@@ -35,7 +35,7 @@ class App extends Component<AppProps, AppState> {
         <a href="games.html">Full List</a>
         <a href="reviews.html">SQFT</a>
         <a href="reviews.html">Percentage</a>
-        <a href="faq.html">FAQ</a>
+        <a href="faq.tsx">FAQ</a>
         <a href="reviews.html">Scientiffic Method</a>
       </div>
     </nav>

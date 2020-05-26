@@ -1,20 +1,47 @@
-<!DOCTYPE HTML>
- 
-<html>
-	<head>
-		<title>FAQ</title>
-		<meta charset="utf-8" />
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import Hello from './Hello';
+import './style.scss';
+import Flexbox from 'flexbox-react';
+import $ from 'jquery';
 
-		<!--<link rel="stylesheet" href="assets/css/main.css" />-->
-		
-	</head>
-	<body class="is-preload">
+interface AppProps { }
+interface AppState {
+  name: string;
+}
 
- 
-		<!-- Main -->
-			<div id="main">
+class App extends Component<AppProps, AppState> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'Project Name'
+    };
+  }
 
-				<!-- Intro -->
+  render() {
+    return (
+      
+    <div class="container">
+    
+      <nav id="hamnav">
+      <label for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger"/>     
+      <div id="hamitems"> 
+        <a href="#"><img src="https://cdn.jsdelivr.net/gh/Ragevortex/react-web-report-sample@master/images/icc.png" alt="ICC Logo" class="ICCLogo"/></a> 
+        <a href="index.html">Intro</a>
+        <a href="about.html">Building Index</a>
+        <a href="reviews.html">Files</a>
+        <a href="tech.html">Narrative</a>
+        <a href="games.html">Full List</a>
+        <a href="reviews.html">SQFT</a>
+        <a href="reviews.html">Percentage</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Scientiffic Method</a>
+      </div>
+    </nav>
+    <div id="content">
+   	<div id="main">
+
 					<section id="top" class="one dark cover">
 				 
 
@@ -206,41 +233,16 @@
 				
 
 			</div>
-
-
-
-	<!-- Scripts -->
-
-	<style>
-	#faqAcrodion, .panel-default, .panel-heading{
- /* color: #333;*/
-    background-color: #f5f5f5;
-    border-color: #ddd;  
-	color: #000000!important;
-	margin:5px;
-	border-radius:8px;
-	padding:8px;
-	
-}
-#faqAcrodion, a{
-color: #777777!important;
+    
+    </div>
+    <footer flex flex-end class="footer">Footer</footer>
+    </div>
+    
+    );
+  }
 }
 
-#faqAcrodion,.panel-title{
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    color: #000000!important;
-}
-faqAccordion ~ p{text-align:left!important}
-.accordion>.card{overflow:hidden}.accordion>.card:not(:first-of-type) .card-header:first-child{border-radius:0}.accordion>.card:not(:first-of-type):not(:last-of-type){border-bottom:0;border-radius:0}.accordion>.card:first-of-type{border-bottom:0;border-bottom-right-radius:0;border-bottom-left-radius:0}.accordion>.card:last-of-type{border-top-left-radius:0;border-top-right-radius:0}.accordion>.card .card-header{margin-bottom:-1px}
-	</style>
 
-			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-			
-			<!----><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	</body>
-</html>
+
+render(<App />, document.getElementById('root'));
