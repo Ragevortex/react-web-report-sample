@@ -26,7 +26,14 @@ footer{
 }
 header{
   min-width:100%;
-  background-color:#98a7ff;
+ /* background-color:#98a7ff;*/
+  padding:15px;
+  background: rgb(214,212,255);
+background: linear-gradient(0deg, rgba(214,212,255,1) 0%, rgba(240,240,255,1) 27%, rgba(248,254,255,1) 100%);
+}
+header img{
+  margin-right:auto;margin-left:auto;text-align:center;
+  width:90%; height:auto;
 }
 .item li{
   flex-basis:  25% auto; /* default auto */
@@ -40,4 +47,4 @@ header{
    width:25%;
    margin:5%;
  }
-.ICCLogo{width:100%;height:auto;}
+.ICCLogo{width:60%;height:auto;background:#fff;padding:10px;}

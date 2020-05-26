@@ -27,7 +27,7 @@ class App extends Component<AppProps, AppState> {
       <label for="hamburger">&#9776;</label>
       <input type="checkbox" id="hamburger"/>     
       <div id="hamitems"> 
-        <a href="#"><img src="images/icc.png" alt="ICC Logo" class="ICCLogo"/></a> 
+        <a href="#"><img src="https://cdn.jsdelivr.net/gh/Ragevortex/react-web-report-sample@master/images/icc.png" alt="ICC Logo" class="ICCLogo"/></a> 
         <a href="index.html">Intro</a>
         <a href="about.html">Building Index</a>
         <a href="reviews.html">Files</a>
@@ -41,6 +41,12 @@ class App extends Component<AppProps, AppState> {
     </nav>
     <div id="content">
     <Hello name={this.state.name} />
+    <header>
+   
+								<a onclick="load_Reports()" href="#" class="button">Go to Report</a>
+							<p><img src="https://cdn.jsdelivr.net/gh/Ragevortex/react-web-report-sample@master/images/sample-cover.png" alt="Cover Image" /></p>
+    
+    </header>
     <ul class="flex-container">
       <li class="flex-item">1</li>
       <li class="flex-item">2</li>
@@ -51,7 +57,9 @@ class App extends Component<AppProps, AppState> {
     </ul>
     
     </div>
+    <footer flex flex-end class="footer">Footer</footer>
     </div>
+    
     );
   }
 }
