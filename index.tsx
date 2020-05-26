@@ -25,13 +25,18 @@ class App extends Component<AppProps, AppState> {
     
       <nav id="hamnav">
       <label for="hamburger">&#9776;</label>
-      <input type="checkbox" id="hamburger"/>      
+      <input type="checkbox" id="hamburger"/>     
       <div id="hamitems"> 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tech.html">Tech</a>
-        <a href="games.html">Games</a>
-        <a href="reviews.html">Reviews</a>
+        <a href="#"><img src="images/icc.png" alt="ICC Logo" class="ICCLogo"/></a> 
+        <a href="index.html">Intro</a>
+        <a href="about.html">Building Index</a>
+        <a href="reviews.html">Files</a>
+        <a href="tech.html">Narrative</a>
+        <a href="games.html">Full List</a>
+        <a href="reviews.html">SQFT</a>
+        <a href="reviews.html">Percentage</a>
+        <a href="reviews.html">FAQ</a>
+        <a href="reviews.html">Scientiffic Method</a>
       </div>
     </nav>
     <div id="content">
