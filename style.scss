@@ -17,6 +17,9 @@ body {
   margin: 0;
   margin-top:90px!important;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+   /*custom background color gradient*/
+   background: rgb(214,212,255);
+background: linear-gradient(0deg, rgba(214,212,255,1) 0%, rgba(240,240,255,1) 27%, rgba(248,254,255,1) 100%); 
 }
 .container {
   justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right;
@@ -24,19 +27,22 @@ body {
 footer{
   min-width:100%;
   background-color:#cdcdcd;
+ bottom:0px;
+ height:90px;
+  position:absolute;
 }
 header{
  /* min-width:100%;*/
  /* background-color:#98a7ff;*/
   /*padding:15px;*/
-  background: rgb(214,212,255);
-background: linear-gradient(0deg, rgba(214,212,255,1) 0%, rgba(240,240,255,1) 27%, rgba(248,254,255,1) 100%);
+ 
 }
 header img{
   display:flex;
  /* float:left;clear:both;*/
   margin-right:auto;margin-left:auto;text-align:center;
   width:100%; height:auto;
+  max-width:400px;
 }
 .item li{
   flex-basis:  25% auto; 
@@ -79,7 +85,7 @@ header img{
   width:25%;
   max-width: 200px;
   min-width:80px;
-  height: 150px;
+  height: auto;
   margin-top: 10px;
   /*line-height: 150px;*/
   color: white;
