@@ -4,36 +4,25 @@ import Hello from './Hello';
 import './style.scss';
 import Flexbox from 'flexbox-react';
 import $ from 'jquery';
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+
 
 interface AppProps { }
 interface AppState {
   name: string;
 }
-/*
+
 class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
       name: 'Project Name'
     };
-  }*/
+  }
 
-/*render() {
+render() {
     return (
       
-    
-    
-    );
-  }
-}*/
-
-function HomeScreen() {
-  return (
-   <div class="container">
+    <div class="container">
     
       <nav id="hamnav">
       <label for="hamburger">&#9776;</label>
@@ -71,19 +60,10 @@ function HomeScreen() {
     </ul>
     </footer>
     </div>
-  );
+    
+    );
+  }
 }
 
-const Stack = createStackNavigator();
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-export default App;
-//render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
