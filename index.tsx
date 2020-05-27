@@ -47,17 +47,17 @@ class App extends Component<AppProps, AppState> {
 							<p><img src="https://cdn.jsdelivr.net/gh/Ragevortex/react-web-report-sample@master/images/sample-cover.png" alt="Cover Image" /></p>
     
     </header>
+    
+    
+    </div>
+    <footer flex flex-end class="footer">Footer
     <ul class="flex-container">
       <li class="flex-item">1</li>
       <li class="flex-item">2</li>
       <li class="flex-item">3</li>
-      <li class="flex-item">4</li>
-      <li class="flex-item">5</li>
-      <li class="flex-item">6</li>
+     
     </ul>
-    
-    </div>
-    <footer flex flex-end class="footer">Footer</footer>
+    </footer>
     </div>
     
     );

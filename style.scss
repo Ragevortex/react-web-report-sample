@@ -15,6 +15,7 @@
 html, body { height: 100%; }
 body {
   margin: 0;
+  margin-top:90px!important;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 .container {
@@ -38,7 +39,7 @@ header img{
   width:100%; height:auto;
 }
 .item li{
-  flex-basis:  25% auto; /* default auto */
+  flex-basis:  25% auto; 
  }
  .item li{
     background:#ffccdd;
@@ -50,3 +51,107 @@ header img{
    margin:5%;
  }
 .ICCLogo{width:60%;height:auto;background:#fff;padding:10px;}
+
+/*flex and nav*/
+ .flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width:25%;
+  max-width: 200px;
+  min-width:80px;
+  height: 150px;
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*----ham menu---*/
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+  width: 100%;
+  background: #000;
+  /* Optional */
+  position: sticky;
+  top: 0;
+  position: absolute;
+    float: left;
+    z-index: 500;
+}
+
+/* Hide Hamburger */
+#hamnav label, #hamburger {
+    display: none;    }
+
+/* Horizontal Menu Items */
+#hamitems { display: flex; }
+#hamitems a {
+  width: 20%; /* 100% / 5 tabs = 20% */
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+#hamitems a:hover {
+  background: #401408;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* Show Hamburger Icon */
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: #a02620;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Break down menu items into vertical */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  /* Toggle Show/Hide Menu */
+  #hamitems { /*display: none;*/ display: none;  opacity: 0;  transition: display 0s, opacity 0.5s linear; }
+  #hamnav input:checked ~ #hamitems { /*display: block;*/display: block;  opacity: 1; }
+}
+
+/* [DOES NOT MATTER] */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
+}
+#page-nav {
+  background: #000;
+  position: sticky;
+  top: 0;
+}
