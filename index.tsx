@@ -4,24 +4,36 @@ import Hello from './Hello';
 import './style.scss';
 import Flexbox from 'flexbox-react';
 import $ from 'jquery';
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 interface AppProps { }
 interface AppState {
   name: string;
 }
-
+/*
 class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
       name: 'Project Name'
     };
-  }
+  }*/
 
-  render() {
+/*render() {
     return (
       
-    <div class="container">
+    
+    
+    );
+  }
+}*/
+
+function HomeScreen() {
+  return (
+   <div class="container">
     
       <nav id="hamnav">
       <label for="hamburger">&#9776;</label>
@@ -35,7 +47,7 @@ class App extends Component<AppProps, AppState> {
         <a href="games.html">Full List</a>
         <a href="reviews.html">SQFT</a>
         <a href="reviews.html">Percentage</a>
-        <a href="faq.tsx">FAQ</a>
+        <a href="faq">FAQ</a>
         <a href="reviews.html">Scientiffic Method</a>
       </div>
     </nav>
@@ -59,12 +71,19 @@ class App extends Component<AppProps, AppState> {
     </ul>
     </footer>
     </div>
-    
-    );
-  }
+  );
 }
 
+const Stack = createStackNavigator();
 
-
-
-render(<App />, document.getElementById('root'));
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+export default App;
+//render(<App />, document.getElementById('root'));
