@@ -14,7 +14,7 @@ class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Project Name'
+      name: 'FAQ'
     };
   }
 
